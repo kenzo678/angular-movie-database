@@ -1,0 +1,24 @@
+changes to make to movies db: 
+
+- add login (ofc)(first of all)
+- add title to navbar
+- add burger menu
+- add nav back button on detail page
+- upload image(like, a file) to [add] instead of url
+- add movie details
+-- add imdb/tomato/user score (stars or x/10)
+-- add sinopsis
+
+
+cambios a movies db: 
+
+- agregar login (porsupuesto)(primero que todo)
+- agregar titulo a la navbar
+- agregar burger menu
+- agregar nav back button en details(detalles)
+- subir imagen (archivo) a [add] envez de url 
+- agregar a detalles de pelicula
+-- agregar puntahje de imdb/tomato/user (estrella o x/10)
+-- agregar sinopsis
+
+
