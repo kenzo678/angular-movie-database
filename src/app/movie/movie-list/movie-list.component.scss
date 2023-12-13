@@ -1,6 +1,9 @@
 img {
-  max-width: 200px;
-  height: 400px;
+  //200x400
+  //253x376
+  max-width: 253px;
+  height: 376px;
+  transform: scale(0.7);
   object-fit: full;
 }
 
@@ -8,7 +11,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   justify-content: center;
 }
 
