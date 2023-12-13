@@ -12,13 +12,16 @@ changes to make to movies db:
 
 cambios a movies db: 
 
-- agregar login (porsupuesto)(primero que todo)
-- agregar titulo a la navbar
-- agregar burger menu
-- agregar nav back button en details(detalles)
-- subir imagen (archivo) a [add] envez de url 
-- agregar a detalles de pelicula
--- agregar puntahje de imdb/tomato/user (estrella o x/10)
--- agregar sinopsis
+? - agregar login (porsupuesto)(primero que todo)
+* - agregar titulo a la navbar
+? - agregar burger menu
+? - agregar nav back button en details(detalles) 
+X - subir imagen (archivo) a [add] envez de url 
+V - agregar a detalles de pelicula
+V -- agregar puntahje de imdb/tomato/user (estrella o x/10)
+V -- agregar sinopsis
 
+X - Agregar peliculas.
+X - Dockerfile
+X -- Generar script para cargar el proyecto.
 

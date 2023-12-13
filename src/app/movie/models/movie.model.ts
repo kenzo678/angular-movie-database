@@ -1,11 +1,11 @@
 export interface Movie {
-  id: number;
-  name: string;
-  genre: string;
-  image: string;
-  releaseYear: string;
-  score: number;
-  sinopsis: string;
+  id: number,
+  name: string,
+  genre: string,
+  image: string,
+  releaseYear: string,
+  score: number,
+  sinopsis: string
 }
 
 export const movies: Movie[] = [
