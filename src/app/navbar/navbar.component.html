@@ -6,18 +6,19 @@
   </button>
 </nav>
 -->
-<nav>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <div class="main-content-wrapper">
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-    </div>
+
+<nav class="navbar">
+  <button class="hamburger" (click)="toggleMenu()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <div class="menu" *ngIf="showMenu" [ngClass]="{'show': showMenu}">
+    <a routerLink="movies">Home</a>
+    <a routerLink="movies/add">Add - Agregar Pelivula</a>
+    <a href="#">Log Out</a>
   </div>
 </nav>
+
+

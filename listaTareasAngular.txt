@@ -13,9 +13,10 @@ changes to make to movies db:
 cambios a movies db: 
 
 ? - agregar login (porsupuesto)(primero que todo)
-* - agregar titulo a la navbar
-? - agregar burger menu
-? - agregar nav back button en details(detalles) 
+X - agregar titulo a la navbar
+V - agregar burger menu
+V - agregar nav back button en details(detalles)
+    (en vez de agrego un boton home para volver, al burger menu)
 X - subir imagen (archivo) a [add] envez de url 
 V - agregar a detalles de pelicula
 V -- agregar puntahje de imdb/tomato/user (estrella o x/10)
