@@ -8,6 +8,9 @@ import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { LoginComponent } from './login/login.component';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [AppComponent, NavbarComponent, LoginComponent],
   imports: [
@@ -15,6 +18,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

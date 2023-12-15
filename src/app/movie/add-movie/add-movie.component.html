@@ -1,9 +1,23 @@
 <form [formGroup]="movieForm" (ngSubmit)="addMovie()">
 
   <input type="text" placeholder="Name" formControlName="name" />
-  <input type="text" placeholder="Image URL" formControlName="image" />
+  <!--<input type="text" placeholder="Image URL" formControlName="image" />-->
+
+  <div>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" formControlName="image"/>
+  </div>
+
+  <!--muestra la imagen subida, como Preview.-->
+  Preview:
+  <div *ngIf="imageUrl">
+    <img [src]="imageUrl" alt="Movie Poster" />
+  </div>
+
   <input type="text" placeholder="Genre" formControlName="genre" />
-  <input type="text" placeholder="Release Year" formControlName="releaseYear"/>
+  <input type="number" placeholder="Release Year" formControlName="releaseYear"/>
+
+  <input type="number" placeholder=5.0 min=0 max=10.0 formControlName="rating" />
+  <input type="text" placeholder="In this movie ... and then ... finally ... the end :)" formControlName="sinopsis"/>
 
   <button [disabled]="!movieForm.valid" type="submit">Add</button>
 </form>
