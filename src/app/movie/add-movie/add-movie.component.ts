@@ -34,6 +34,8 @@ export class AddMovieComponent implements OnInit {
 
   addMovie() {
     if (this.movieForm.valid) {
+      //this.movieForm.value.image = "../../../assets/{{imageUrl}}";
+      this.movieForm.patchValue({ image: "../../../assets/"+this.imageUrl});
       this.movieService.addMovie(this.movieForm.value).subscribe((res) => {
         this.movieForm.reset();
         this.router.navigate(["/"]);

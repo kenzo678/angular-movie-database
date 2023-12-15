@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -7,26 +9,43 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  authService: any;
   isLoggedIn: boolean = false;
-  username: String = "usuario123";
-  password: String = "contra123";
-  username2: String = "";
-  password2: String = "";
+  username: string = "";
+  password: string = "";
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private snackBar: MatSnackBar) {}
 
   onSubmit() {
-    // Aquí deberías verificar las credenciales ingresadas
-    // y autenticar al usuario. Por ahora, simplemente redireccionaremos al dashboard.
-    if(this.username2==this.username && this.password2==this.password){
-      this.isLoggedIn = true;
-    }
-    if(this.isLoggedIn){
-      this.router.navigate(['/movie']);
+    /*
+    if (this.username === 'your_username' && this.password === 'your_password') {
+      alert('Login successful!');
     } else {
-    this.router.navigate(['/login']);
+      alert('Invalid credentials. Please try again.');
     }
+    */
+    const isValid = this.authService.login(this.username, this.password);
+
+    if (isValid) {
+      this.router.navigate(['/movies']);
+    } else {
+      this.showErrorMessage('Invalid username or password');
+    }
+  }
+
+  login() {
+    const isValid = this.authService.login(this.username, this.password);
+
+    if (isValid) {
+      this.router.navigate(['/movies']);
+    } else {
+      this.showErrorMessage('Invalid username or password');
+    }
+  }
+
+  private showErrorMessage(message: string): void {
+    this.snackBar.open(message, 'Close', {
+      duration: 3000, // Set the duration for which the snackbar is displayed in milliseconds
+    });
   }
 
 }
