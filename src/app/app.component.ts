@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: "app-root",
@@ -8,6 +10,17 @@ import { Component } from "@angular/core";
     <router-outlet></router-outlet>
   </main>`,
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = "angular-movie-database";
+  constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    // Subscribe to the isAuthenticated$ observable
+    this.authService.isAuthenticated$.subscribe((isAuthenticated) => {
+      if (!isAuthenticated) {
+        // If not authenticated, navigate to the login page
+        this.router.navigate(['/login']);
+      }
+    });
+  }
 }

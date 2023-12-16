@@ -7,9 +7,15 @@
   </button>
 
   <div class="menu" *ngIf="showMenu" [ngClass]="{'show': showMenu}">
-    <a routerLink="movies">Home</a>
-    <a routerLink="movies/add">Add - Agregar Pelivula</a>
-    <a href="#">Log Out</a>
+    <a routerLink="">Home</a>
+    <a routerLink="movies/add">Add - Agregar Pelicula</a>
+
+    <!--<div *ngIf="authService.isAuthenticated$ | async">-->
+    <div>
+      <!-- Display logout link when authenticated -->
+      <a (click)="logout()">Logout</a>
+    </div>
+
   </div>
 </nav>
 

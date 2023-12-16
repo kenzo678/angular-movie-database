@@ -15,16 +15,16 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router, private snackBar: MatSnackBar) {}
 
-  onSubmit() {
-    /*
-    if (this.username === 'your_username' && this.password === 'your_password') {
-      alert('Login successful!');
-    } else {
-      alert('Invalid credentials. Please try again.');
+  ngOnInit() {
+    // Check if the user is already authenticated
+    if (this.authService.isAuthenticated) {
+      // If authenticated, navigate to the /movies route
+      this.router.navigate(['/movies']);
     }
-    */
-    const isValid = this.authService.login(this.username, this.password);
+  }
 
+  onSubmit() {
+    const isValid = this.authService.login(this.username, this.password);
     if (isValid) {
       this.router.navigate(['/movies']);
     } else {
