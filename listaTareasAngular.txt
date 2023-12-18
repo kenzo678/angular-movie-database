@@ -12,17 +12,18 @@ changes to make to movies db:
 
 cambios a movies db: 
 
-? - agregar login (porsupuesto)(primero que todo)
+V - agregar login (porsupuesto)(primero que todo)
+X -- encriptar credenciales.
 X - agregar titulo a la navbar
 V - agregar burger menu
 V - agregar nav back button en details(detalles)
-    (en vez de agrego un boton home para volver, al burger menu)
+V   (en vez de agrego un boton home para volver, al burger menu)
 X - subir imagen (archivo) a [add] envez de url 
 V - agregar a detalles de pelicula
 V -- agregar puntahje de imdb/tomato/user (estrella o x/10)
 V -- agregar sinopsis
 
-X - Agregar peliculas.
+V - Agregar peliculas.
 X - Dockerfile
 X -- Generar script para cargar el proyecto.
 
